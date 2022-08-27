@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alinhando uma DIV</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            background-color: black;
+        }
+        .box {
+            height: 7.5em;
+            width: 7.5em;
+        }
+        .caixa {
+            display: flex;
+            height: 100vh;
+            justify-content: center;   
+            align-items: center;
+        }
+        .bloco1 {
+            background-color: blueviolet;
+            order: 100;
+        }
+        .bloco2 {
+            background-color: brown;
+            order: 3;
+        }
+        .bloco3 {
+            order: 1;
+            background-color: blue;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="caixa">
+        <div class="bloco1 box"></div>
+        <div class="bloco2 box"></div>
+        <div class="bloco3 box"></div>
+    </div>
+</body>
+</html>

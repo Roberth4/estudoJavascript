@@ -1,0 +1,48 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+.box1 {
+    height: 18vh;
+    width: 100%;
+    background-color: #eebb4c;
+}
+.box2 {
+    height: 82vh;
+    width: 100%;
+    background-color: #6173f7;
+}
+.image-central {
+    display: flex;
+    position: absolute;
+    top: 17%;
+    left: 50%;
+    margin-top: -100px;
+    margin-left: -100px;
+    height: 200px;
+    width: 200px;
+    background-color: rgb(245, 219, 148);
+    border-radius: 100px;
+    border: 1px solid black;
+}
+
+.form {    
+    display: flex;
+    flex-direction: column;
+    max-width: 500px;
+    height: 350px;
+    background-color: beige;
+    position: relative;
+    margin: auto;
+    top: 25%;
+    border-radius: 10px;
+    padding: 30px;
+}
+.form p {
+    margin-bottom: 10px;
+}
+input {
+    max-width: 200px;
+}

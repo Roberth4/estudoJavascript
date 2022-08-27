@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Detran</title>
+</head>
+<body>
+    <p>Insira a sua velocidade!</p>
+    <input type="number" name="vel1" id="vel1">
+    <input type="button" value="Enviar" onclick="enviar()">
+    <div id="resultado"> </div>
+
+    <script>
+        function enviar() {
+            const vel1 = document.getElementById('vel1')
+            const res = document.getElementById('resultado')
+            const vel = Number(vel1.value)
+
+            if(vel>80){
+                res.innerText = `A sua velocidade é: ${vel}, portanto você está multado! WIU WIU WIU WIU WIU PARADO AI CIDADÃO!`
+            }else{
+                res.innerText = `Tudo certo! digira com cautela e use cinto de segurança.`
+            }
+        }
+    </script>
+</body>
+</html>

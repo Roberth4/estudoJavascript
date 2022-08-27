@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Condições de aninhamento</title>
+    <style>
+
+    </style>
+</head>
+<body>
+
+    <h1>Escreva a sua idade e seu nome.</h1>
+    <p>Nome</p>
+    <input type="text" name="nome" id="nome"><br>
+    <p>Idade</p>
+    <input type="text" name="idade" id="idade"><br><br>
+    <input type="button" value="Enviar" id="enviar">
+    <div id="texto"></div>
+
+    <script>
+        const a = document.getElementById('enviar')
+        a.addEventListener('click', enviar)
+        
+        
+        function enviar(){
+            const input = document.getElementById('nome')
+            const name = input.value
+
+            const b = document.getElementById('idade')
+            const age = Number(b.value)
+            const txt = document.getElementById('texto')
+
+            if (age == 18){
+                txt.innerHTML = `<p>${name}, Você tem 18 anos!</p>`
+            }else if (age == 0){
+                txt.innerHTML = `<p>${name}, Você provavelmente nem nasceu!</p>`
+            }else if (age < 0 || age > 125){
+                txt.innerHTML = `<p>${name}, Idade inválida!</p>`
+            }else if (age >= 60 && age <= 125){
+                txt.innerHTML = `<p>${name}, Você tá idoso!</p>`
+            }else if(age > 18){
+                txt.innerHTML = `<p>${name}, Você tem mais que 18 anos`
+            }else if (age >= 1 && age <= 17){
+                txt.innerHTML = `<p>${name}, Você tem menos que 18 anos!</p>`
+            }else {
+                txt.innerHTML = `<p>Inválido</p>`
+            } 
+        }
+    </script>
+</body>
+</html>
