@@ -59,3 +59,7 @@ header, footer {
 .num {
     max-width: 75px;
 }
+
+select#flist {
+    width: 150px;
+}

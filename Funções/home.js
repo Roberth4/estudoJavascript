@@ -1,9 +1,11 @@
-function parImp(n) {
-    if(parImp % 2 == 0) {
-        return 'Par'
-    }else{
-        return 'Ímpar'
+let num = 12
+
+function parimp(n) {
+    if (n%2 == 0) {
+        return num
+    }else {
+        return num
     }
 }
-let res = parImp(50)
-console.log(`O resultado é ${res}. `)
+let res = parimp(num)
+console.log(res)
