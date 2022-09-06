@@ -3,9 +3,7 @@ let lista = document.getElementById('flist')
 let res = document.getElementById('res')
 let valores = []
   
-
-
-function isNumero(n) {
+function isNumero(n) { /* Função para validar o número da array. */
     if(Number(n) >= 1 && Number(n) <= 100) {
         return true
     }else {
@@ -13,7 +11,7 @@ function isNumero(n) {
     }
 }
 
-function inLista(n, l) {
+function inLista(n, l) { /* Função para verificar os elementos da lista. */
     if (l.indexOf(Number(n)) != -1){
         return true
     }else {
@@ -37,15 +35,21 @@ function finalizar() {
     if(valores.length == 0){
         alert('Por favor, insira valores.')
     }else {
-        let tmn = valores.length
-        let NumA = valores.map(Number);
-        let max = Math.max(...NumA)
-        let min = Math.min(...NumA)
+        let tmn = valores.length /* Quantidade de números cadastrados. */
+        let NumA = valores.map(Number); /* Transformei as strings do vetor em números para fazer os demais cálculos. */
+        let max = Math.max(...NumA) /* Maior número do vetor */
+        let min = Math.min(...NumA) /* Menor número do vetor */
+        let sum = 0 /* Variável que receberá a soma dos elementos de arrays. */
+        for (let i = 0; i < valores.length; i++){
+            sum += valores[i]
+        }
 
-        res.innerHTML = `Ao todo, temos ${tmn} números cadastrados. <br>
-        O maior número cadastrado é ${max}.<br>
-        O menor número cadastrado é ${min}.<br>`
-        
-
+        res.innerHTML = `
+        <p>Ao todo, temos ${tmn} números cadastrados.</p>
+        <p>O maior número cadastrado é ${max}.</p>
+        <p>O menor número cadastrado é ${min}.</p>
+        <p>A soma de todos os valores, temos ${sum}.</p>
+        <p>A média dos valores digitados é ${sum/tmn}.</p>
+        `
     }
 }
